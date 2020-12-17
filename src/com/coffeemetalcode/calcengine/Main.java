@@ -26,22 +26,7 @@ public class Main {
                 result = 0.0d;
                 break;
         }
+
         System.out.println(result);
-	    /*
-	    if (opCode == 'a')
-	        result = value1 + value2;
-	    else if (opCode == 's')
-	        result = value1 - value2;
-	    else if (opCode == 'm')
-	        result = value1 * value2;
-	    else if (opCode == 'd') {
-            if (value2 != 0)
-                result = value1 / value2;
-        }
-	    else {
-            System.out.println("Invalid opCode: " + opCode);
-            result = 0.0d;
-        }
-	     */
     }
 }

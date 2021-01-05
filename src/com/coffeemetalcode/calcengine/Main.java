@@ -42,7 +42,37 @@ public class Main {
 
         double result = execute(opCode, leftVal, rightVal);
 
-        System.out.println(result);
+        // System.out.println(result);
+        displayResult(opCode, leftVal, rightVal, result);
+    }
+
+    private static void displayResult(char opCode, double leftVal, double rightVal, double result) {
+        char symbol = symbolFromOpCode(opCode);
+        StringBuilder builder = new StringBuilder(45);
+
+        builder.append(leftVal);
+        builder.append(" ");
+        builder.append(symbol);
+        builder.append(" ");
+        builder.append(rightVal);
+        builder.append(" = ");
+        builder.append(result);
+
+        System.out.println(builder.toString());
+    }
+
+    private static char symbolFromOpCode(char opCode) {
+        char[] opCodes = {'a', 's', 'm', 'd'};
+        char[] symbols = {'+', '-', '*', '/'};
+        char symbol = ' ';
+
+        for(int i = 0; i < opCodes.length; i++) {
+            if(opCode == opCodes[i]) {
+                symbol = symbols[i];
+                break;
+            }
+        }
+        return symbol;
     }
 
     private static void handleCommandLine(String[] args) {
